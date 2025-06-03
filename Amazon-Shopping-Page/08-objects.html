@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Functions</title>
+    </head>
+    <body>
+        <script>
+            const Player = {
+                name: 'Player1', score: 3, winrate: 0.55
+            }
+            const Computer = {
+                name: 'Com1', score: 2, winrate: 0.45
+            }
+            console.log(Player)
+            console.log(Player.name)
+            console.log(Player.score)
+
+            const Product = {
+                name: 'Laptop', 'delivery time': '1 day', rating: {stars: 4.5, reviews: 13098}, fun: function function1() {
+                    console.log('Oops! Dinner is not ready');
+                }
+            };
+            const Product2 = {
+                name: 'Screaming Yellow Rabbit', 'delivery time': '43 days', rating: {stars: 3.8, reviews: 2500}, fun: function function2() {
+                    console.log('Oops! The rabbit is hungry again');
+                }
+            };
+            console.log(Product);
+            console.log(Product.name);
+            console.log(Product['delivery time']); // outputs '1 day'
+            console.log(Product.rating.stars);
+            console.log(Product.rating.reviews);
+
+            /////////////////////
+            Product2.fun();
+            /////////////////////
+
+            concole.log(typeof console.log); //outputs 'function'
+
+            /////////////////////
+            JSON.stringify(Product);
+            JSON.stringify(Product2);
+            /////////////////////
+
+            const jsonString = JSON.stringify(Product2);
+            JSON.parse(jsonString)
+
+            const object1 = {
+                message: 'hello'
+            }
+            const object2 = object1;
+            if(object1 !== object2) {
+                console.log('This should never happen');
+            }
+            const object3 = {
+                message: 'hello'
+            }
+            if(object1 === object3) {
+                console.log('This should never happen, pointers are different');
+            }
+            const object4 = {
+                message: 'hello',
+                price: 100
+            }
+
+            const { message: object4Message } = object4; // same as object4['message']
+            console.log(object4Message); // outputs 'hello'
+
+            const object5 = {
+                // message: message
+                message,
+                method: function function1() {
+                    console.log('Dinner is ready');
+                }
+            }
+
+            const {message, price} = object5;
+            object5.method();
+
+        </script>
+    </body>
+</html>

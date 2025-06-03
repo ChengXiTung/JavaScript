@@ -1,0 +1,23 @@
+# Ignore node_modules (the big one!)
+node_modules/
+
+# Ignore logs
+logs
+*.log
+
+# Ignore .zip or temp files
+*.zip
+*.tmp
+
+# Ignore VSCode settings
+.vscode/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore OS folders
+__MACOSX/
+
+# Ignore environment/config files
+.env

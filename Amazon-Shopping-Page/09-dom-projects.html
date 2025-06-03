@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Projects</title>
+    </head>
+    <body>
+        <p>Youtube Subscribe Button</p>
+        <button onclick="
+            subscribe();
+        " class="js-subscribe-button">Subscribe</button> <!--no \n or spaces should be here-->
+
+        <p>Amazon Shipping Calculator</p>
+        <input placeholder="Cost of order"
+        class="js-cost-input" onkeydown="
+            handleCostKeydown(event);
+        ">
+        <button onclick="
+            calculateTotal();
+        ">Calculate</button>
+        <p class="js-total-cost"></p>
+
+        <script>
+            // String(13098)
+
+            // window.document = document; // this is the global document object
+            window.console.log('window');
+            window.alert('Please go do the dishes it is already 9:00 PM');
+
+            function handleCostKeydown(event) {
+                console.log(event.key); // logs the key pressed in the console
+ 
+                if (event.key === 'Enter') { // checks if the key pressed is 'Enter'
+                    calculateTotal(); // calls the function to calculate total
+                }
+            }
+
+            function calculateTotal() {
+                const inputElement = document.querySelector('.js-cost-input');
+                let cost = Number(inputElement.value); // .value gets the value of input field, and Number() converts it to a number
+
+                if (cost < 40) {
+                    cost = cost + 10;
+                }
+
+                document.querySelector('.js-total-cost')
+                    .innerHTML = `$${cost}`; // .innerHTML sets the content of the element
+            }
+
+            function subscribe() {
+                const buttonElement = document.querySelector('.js-subscribe-button');
+
+                if (buttonElement.innerText === 'Subscribe') { // check if button text is 'Subscribe'
+                    buttonElement.innerHTML = 'Subscribed';
+                    buttonElement.style.backgroundColor = 'red';
+                } else {
+                    buttonElement.innerHTML = 'Subscribe';
+                }
+            }
+            
+        </script>
+    </body>
+</html>

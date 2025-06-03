@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM</title>
+    </head>
+    <body>
+        <button>hello</button>
+        <button class="js-button">Second button</button>
+
+        <script>
+            console.log(document.querySelector('button').innerHTML); // picks button element
+            document.querySelector('button')
+                .innerHTML = 'Changed'; // changes button text
+
+            const buttonElement = document.querySelector('.js-button');
+            console.log(buttonElement.innerHTML); // outputs 'Second button'
+
+            document.querySelector('.js-button')
+                .innerHTML = 'Changed second button'; // changes second button text
+
+            /*
+            "." in front of the class name means that we are selecting an element by its class
+            */
+
+            /*
+            console.log(document.title);
+            document.title = 'Changed'; // this changes the title of the webpage
+
+            console.log(document.body); // We can have HTML elements inside script
+            console.log(typeof document.body); // outputs 'object'
+
+            console.log(document.body.innerHTML); // outputs the <script> stuff
+            document.body.innerHTML = 'Changed'; // Replaces html content with 'Changed'
+            document.body.innerHTML = "<button>Good job!</button>"; 
+            // Replaces html content with a button
+            */
+
+
+
+            /*
+            document.body.innerHTML = 'hello';
+            document.title = 'Good job';
+            */
+        </script>
+    </body>
+</html>

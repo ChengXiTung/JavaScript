@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+      /*
+            const uselessArray = [1, true, 'hello', {name: 'John'}, [1,2,3]];
+
+            console.log(typeof uselessArray); // 'object'
+            console.log(Array.isArray([1,7])); // true
+
+            console.log(Array.isArray('hello')); // false
+            console.log(uselessArray[0]); // 1
+
+            console.log(uselessArray.splice(0, 3)); // [1, true, 'hello']
+            console.log(uselessArray); // [{name: 'John'}, [1,2,3]]
+
+            console.log(uselessArray.push('new item')); // 3, because new length of the array is now 3
+            console.log(uselessArray); // [{name: 'John'}, [1,2,3], 'new item']
+            */
+
+      /*
+           let i = 1;
+           while (i <= 5) {
+                console.log(i);
+                i++;
+           }
+           for (let j = 1; j <= 5; j++) {
+                console.log(j);
+           }
+
+           let randomNumber = 0;
+
+           while( randomNumber < 0.5) {
+                randomNumber = Math.random();
+                console.log(randomNumber);
+           }
+           */
+      /*
+      const todoList = ["make dinner", "wash dishes", "watch youtube"];
+      for (let index = 0; index < todoList.length; index++) {
+        console.log(index);
+        const value = todoList[index];
+        console.log(value);
+      }
+      */
+     const array1 = [1,2,3,4,5];
+     const array2 = array1.slice(); // Creates a shallow copy of array1
+
+     const [firstVal, secondVal] = array1; // Destructuring assignment
+     /*
+        console.log(firstVal); // 1
+        console.log(secondVal); // 2
+    */
+    </script>
+  </body>
+</html>
