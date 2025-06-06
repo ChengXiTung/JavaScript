@@ -1,3 +1,7 @@
+import {cart} from '../data/cart.js';
+// or if you want to rename the variable
+// try import {cart as GuaGuaGooseCart} from '../data/cart.js';
+
 let productsHTML = '';
 
 products.forEach((product) => {
